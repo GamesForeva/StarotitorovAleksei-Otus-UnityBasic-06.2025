@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 namespace Code
@@ -9,32 +5,22 @@ namespace Code
     public class Math : MonoBehaviour
     {
         private void OnValidate()
-
         {
             First();
-            
         }
 
         private void First()
         {
             byte num = 11;
             float numf = 10.5f;
-            var player1 = "isDead";
-            bool TheNumder = num > numf;
-
+            var player = "isDead";
+            bool numder = num > numf;
 
             Debug.LogError(num);
             Debug.LogError(numf);
-            Debug.LogError(TheNumder);
-            Debug.LogError(player1);
+            Debug.LogError(numder);
+            Debug.LogError(player);
         }
-       
-        
-
-        
-        
-
     }
-
 }
 

@@ -1,19 +1,13 @@
-
-using System;
 using UnityEngine;
-using Random = UnityEngine.Random;
+using static UnityEngine.Random;
 
 namespace Code
-
 {
     public class StartDamage : MonoBehaviour
-
     {
-        
         private void Start()
         {
             First();
-            
         }
         
         public float Attack;
@@ -23,32 +17,22 @@ namespace Code
             SummaDamage(Attack);
         }
 
-        
-        
         private void First()
         {
-            float StartHealth = 100;
-            float DamageAfterStart = Random.Range(0, 15f);
-            float result = StartHealth - DamageAfterStart;
-
+            float starthealth = 100;
+            float damageafterstart = Range(0, 15f);
+            float result = starthealth - damageafterstart;
 
             Debug.LogWarning($"Player {result} Health");
         }
 
         private void SummaDamage(float basedamage)
         {
-            float BaseHP = 100;
-            
-            float multiplier = Random.Range(1f, 2f);
-            
-            float Damage = (basedamage * multiplier);
-            
-            Debug.LogWarning($"Health {BaseHP - Damage}");
+            float baseHP = 100;
+            float multiplier = Range(1f, 2f);
+            float damage = (basedamage * multiplier);
 
-
+            Debug.LogWarning($"Health {baseHP - damage}");
         }
-         
     }
-    
-    
 }
