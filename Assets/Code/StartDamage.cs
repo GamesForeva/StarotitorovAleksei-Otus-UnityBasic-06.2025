@@ -28,11 +28,16 @@ namespace Code
 
         private void SummaDamage(float basedamage)
         {
-            float baseHP = 100;
-            float multiplier = Range(1f, 2f);
-            float damage = (basedamage * multiplier);
-
-            Debug.LogWarning($"Health {baseHP - damage}");
+            
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                float baseHP = 100;
+                float multiplier = Range(1f, 2f);
+                float damage = (basedamage * multiplier);
+                float health = baseHP - damage;
+                Debug.LogWarning($"Health {health}");;
+                
+            }
         }
     }
 }
